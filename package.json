@@ -1,0 +1,26 @@
+{
+  "name": "pizza_app",
+  "version": "1.0.0",
+  "description": "realtime pizza app project",
+  "main": "index.js",
+  "scripts": {
+    "dev":"nodemon server.js",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nipendra/Pizza_App.git"
+  },
+  "author": "Nipendra Singh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nipendra/Pizza_App/issues"
+  },
+  "homepage": "https://github.com/nipendra/Pizza_App#readme",
+  "dependencies": {
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "express-ejs-layouts": "^2.5.0",
+    "nodemon": "^2.0.4"
+  }
+}
