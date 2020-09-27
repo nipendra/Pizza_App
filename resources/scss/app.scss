@@ -1,0 +1,22 @@
+@import './variables';
+
+body { 
+    font-family: 'Lato', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    color:$dark;
+}
+
+// cart 
+nav li:last-child a{
+    background-color: $primary;
+    &:hover{
+        background-color:$primary-hover;
+    }
+}
+// nav list 
+nav li a{
+    transition: all $smooth;
+    &:hover{
+        color:$primary;
+    }
+}
