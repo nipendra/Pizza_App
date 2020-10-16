@@ -4,7 +4,6 @@ body {
     font-family: 'Lato', sans-serif;
     -webkit-font-smoothing: antialiased;
     color:$dark;
-    height:4000px;
 }
 
 // cart 
@@ -23,4 +22,18 @@ nav li a{
 }
 section.hero{
     background-color: $secondary;
+}
+.size{
+    background: $secondary;
+}
+
+.add-to-cart{
+
+    border:2px solid $primary;
+    transition :$smooth;
+    &:hover{
+        background: $primary;
+        border-color:$pure;
+        color: $pure;
+    }
 }
