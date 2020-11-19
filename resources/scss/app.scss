@@ -37,3 +37,26 @@ section.hero{
         color: $pure;
     }
 }
+.btn-primary{
+    background-color: $primary;
+    &:hover{
+        background-color: $primary-hover;
+        transition: $smooth;
+    }
+}
+
+section.cart{
+    background: $secondary;
+    .amount{
+        color:$primary;
+    }
+}
+section.login{
+    background: $secondary;
+    a{
+        color: $primary;
+        &:hover{
+            color: $primary-hover;
+        }
+    }
+}
