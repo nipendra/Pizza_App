@@ -10,7 +10,6 @@ const mongoose= require('mongoose')
 
     // url= 'mongodb+srv://nipendra:pizza-app@pizza-app.o1cb0.mongodb.net/pizza-app?retryWrites=true&w=majority'
     url='mongodb://localhost:27017/pizza-app'
-
     // database connection
     mongoose.connect(url, {useNewUrlParser: true, useUnifiedTopology: true,useCreateIndex:true, useFindAndModify:true});
     //Get the default connection
