@@ -1,22 +1,25 @@
-const authController = require('../app/http/controllers/authController')
-const cartController = require('../app/http/controllers/customers/cartController')
-const homeController = require('../app/http/controllers/homeController')
+// const authController = require('../app/http/controllers/authController')
+// const cartController = require('../app/http/controllers/customers/cartController')
+// const homeController = require('../app/http/controllers/homeController')
 
-// routes
+// // routes
 
-function initRouts(app)
-{
-    app.get('/', homeController().index)
-    // (req,res)=>{ 
-    //     res.render('home.ejs')
-    // })  
-    app.get('/cart',cartController().index)
+// function initRouts(app)
+// {
+//     // app.get('/', homeController().index)
+//     // // (req,res)=>{ 
+//     // //     res.render('home.ejs')
+//     // // })  
+//     // app.get('/cart',cartController().index)
 
-    app.get('/login',authController().login)
+//     // app.get('/login',authController().login)
 
-    app.get('/register',authController().register)
+//     // app.get('/register',authController().register)
+//     app.get('/',(req,res)=>{
+//         res.render('home')
+//     })
 
-}
+// }
 
-// this is module so we have to export this 
-module.exports=initRouts
+// // this is module so we have to export this 
+// module.exports=initRouts
