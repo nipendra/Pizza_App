@@ -6,14 +6,42 @@ function cartController()
             res.render('customers/cart.ejs')
         },
         update(req,res){
-            let cart ={
-                items:{
-                    pizzaId: {item: pizzaObject, qty:0},
-                },
-                totalQty: 0,
-                totalprices: 0,
+            // let cart ={
+            //     items:{
+            //         pizzaId: {item: pizzaObject, qty:0},
+            //     },
+            //     totalQty: 0,
+            //     totalprices: 0,
+            // }
+// for first cart request 
+            if(!req.session.cart){
+
+                    req.session.cart={
+                            items:{},
+                         totalQty: 0,
+                        totalprices: 0,
+                            
+                    }
             }
-            return res.json({data:'All ok'})
+            
+            let cart=req.session.cart;
+            // check if cart does not in cart
+            if(!cart.items[req.body._id] ) {
+                    cart.items[req.body._id]={
+                        item:req.body,
+                        qty:1,
+                    }
+                cart.totalQty+=1;
+                cart.totalprices=cart.totalprices+ req.body.price;
+              
+            } else{
+
+                cart.items[req.body._id].qty+=1;
+                cart.totalQty+=1;
+                cart.totalprices+=req.body.price;
+            }
+
+            return res.json({totalQty:req.session.cart.totalQty})
         }
         
     }
