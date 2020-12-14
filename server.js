@@ -49,10 +49,16 @@ app.use(express.static('public'));
 
 
 app.use(express.json())
+// global middlware  for accesing cartQantity
+app.use((req, res, next) => {
+    res.locals.session = req.session
+    next() // for ending the process 
+})
 // set template engine  and path to views 
 app.use(expressLayout)
 app.set('views',path.join(__dirname,'/resources/views'))
 app.set('view engine','ejs')
+
 
 
 
