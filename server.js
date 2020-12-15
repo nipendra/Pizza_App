@@ -49,6 +49,8 @@ app.use(express.static('public'));
 
 
 app.use(express.json())
+app.use(express.urlencoded({extended: false}))
+
 // global middlware  for accesing cartQantity
 app.use((req, res, next) => {
     res.locals.session = req.session

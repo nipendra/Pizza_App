@@ -11,25 +11,20 @@ function initRoutes(app)
 
 
     app.get('/cart',cartController().index)
-    // (req,res)=>{
-    //     res.render('customers/cart')
-    // })
+
 
     app.post('/update-cart',cartController().update)
     
     
     app.get('/login', authController().login)
 
-    // (req,res)=>{
-    //     res.render('auth/login')
-    // })
     
     app.get('/register',authController().register)
 
     // (req,res)=>{
     //     res.render('auth/register')
     // })
-
+    app.post('/register',authController().postRegister)
 }
 
 // this is module so we have to export this 
